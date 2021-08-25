@@ -37,30 +37,55 @@ const lesson = {
   ],
 };
 const examplesArray = lesson.themes[0].examples;
-console.log(examplesArray);
+// console.log(examplesArray);
 
 // 3 создаем разметку, вызвав шаблон и передав объект аргументом
 const template = lessonTemplate(lesson);
-console.log(template);
+// console.log(template);
 
 const templateEx = examplesTemplate(examplesArray);
 // console.log(templateEx);
 
 // 4 получаем доступ к элементу, куда будем встраивать сформированный шаблон
-const body = document.querySelector("body");
-console.log(body);
+import refs from "./refs.js";
+const { body } = refs;
+// console.log(body);
 
 // 5 встраиваем полченный шаблон
-body.insertAdjacentHTML("afterbegin", template);
+// body.insertAdjacentHTML("afterbegin", template);
 
 const firstTitle = document.getElementById("1");
-console.log(firstTitle);
+// console.log(firstTitle);
 
 firstTitle.insertAdjacentHTML("afterend", templateEx);
-// JSON stringify & parse
 
-// localStorage
-// setItem(key, value)
-// getItem(key)
-// removeItem(key)
-// clear()
+// // JSON stringify & parse
+// const user = {
+//   name: "user",
+//   age: 18,
+//   skills: "Js",
+// };
+// // console.log(JSON);
+// // console.log(user);
+// const jsonUser = JSON.stringify(user);
+// // console.log(jsonUser);
+
+// const newUser = JSON.parse(jsonUser);
+// // console.log(newUser);
+
+// // localStorage
+// console.log(localStorage);
+// // setItem(key, value)
+// localStorage.setItem("name", "user");
+// localStorage.setItem("user", jsonUser);
+// // getItem(key)
+// const value = localStorage.getItem("name");
+// console.log(value);
+// const newValue = localStorage.getItem("user");
+// console.log(newValue);
+// const myObj = JSON.parse(newValue);
+// console.log(myObj);
+// // removeItem(key)
+// localStorage.removeItem('name')
+// // clear()
+// localStorage.clear()
